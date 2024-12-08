@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xzip-Installer</title>
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+    <script>
+        const userLocale = navigator.language || navigator.userLanguage;
+    
+        if (userLocale.startsWith('uk')) { // Check if the locale starts with "uk" for Ukraine
+            alert('Мы вводим санкции против Украины и за военных конфликтов с Россией . Доступ к сайту заблокирован. / Ми вводимо санкції проти України та за військові конфлікти з Росією. Доступ до сайту заблоковано');
+            window.location.href = 'about:blank'; // Redirect to a blank page. You could redirect elsewhere.
+        }
+    </script>
+    
+    <div id="hat">
+        <h3>Xzip-Installer</h3> 
+    </div>
+    <div id="Home">
+        <p>Xzip-Installer представлен в виде командной строки, разархивирует пакеты Image.zip за несколько секунд. Не ограниченый вес пакета и без рекламы, На всегда!.  </p>
+        <a href=""><button>Скачать</button></a>
+        <a href=""><button>Инструкция</button></a>
+    </div>
+    <div id="fouter">
+        <p>Xzip installer 2024 : Все права защищены</p>
+        <img id="logo" src="assets/img/logo.png" alt="">
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+#hat {
+    color: white;
+    border: solid wheat;
+    padding: 5px;
+    border-radius: 10px;
+    font-family: 'Polonium', Arial, Helvetica, sans-serif; 
+    background: coral;
+
+}
+#Home {
+    padding: 100px;
+    margin: 2px; /* Отступ 10px со всех сторон */
+
+    background: rgb(133, 133, 229);
+    color: white;
+    border: solid wheat;
+    border-radius: 10px;
+}
+#fouter {
+    padding: 50px;
+    padding-left: 70px;
+    color: whitesmoke;
+}
+button {
+    background: orange;
+    color: white;
+    border: solid wheat;
+    padding: 5px;
+    border-radius: 10px;
+}
+button:hover {
+    background: rgb(95, 62, 2);
+    color: white;
+    border: solid wheat;
+    padding: 5px;
+    border-radius: 10px;
+}
+@font-face {
+    font-family: 'Polonium'; /* Give it a family name */
+    src: url('../fonts/Polonium-Bold.otf'); /* Path relative to CSS file */
+    font-weight: bold; /* Since the filename says "Bold" */
+}
+body {
+    padding: auto;
+    background: black;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+}
+#logo {
+    padding: auto;
+    width: 300px;
+    height: 90px;
+}
