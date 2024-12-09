@@ -10,9 +10,13 @@
     <script>
         const userLocale = navigator.language || navigator.userLanguage;
     
-        if (userLocale.startsWith('uk')) { // Check if the locale starts with "uk" for Ukraine
+        if (userLocale.startsWith('ru')) { 
             alert('Мы вводим санкции против Украины и за военных конфликтов с Россией . Доступ к сайту заблокирован. / Ми вводимо санкції проти України та за військові конфлікти з Росією. Доступ до сайту заблоковано');
-            window.location.href = 'about:blank'; // Redirect to a blank page. You could redirect elsewhere.
+            window.location.href = 'lock.html'; 
+        }
+        if (userLocale.startsWith('pl')) {
+            alert('Мы вводим санкции против Украины и за военных конфликтов с Россией . Доступ к сайту заблокирован. / Ми вводимо санкції проти України та за військові конфлікти з Росією. Доступ до сайту заблоковано');
+            window.location.href = 'lock.html'; 
         }
     </script>
     
@@ -21,9 +25,8 @@
     </div>
     <div id="Home">
         <p>Xzip-Installer представлен в виде командной строки, разархивирует пакеты Image.zip за несколько секунд. Не ограниченый вес пакета и без рекламы, На всегда!.  </p>
-        <a href="https://github.com/SasiskaMine/Xzip-Installer/releases/download/XzipInstaller4/Xzip-Installer-master.zip"><button>Скачать</button></a>
+        <a href="download.html"><button>Скачать</button></a>
         <a href="https://github.com/SasiskaMine/Xzip-Installer/blob/main/README.md"><button>Инструкция</button></a>
-        <p>Если у вас не работают кнопки в url при пишите index.html вот "https://sasiskamine.github.io/Xzip-Installer/index.html"</p>
     </div>
     <div id="fouter">
         <p>Xzip installer 2024 : Все права защищены</p>
