@@ -10,27 +10,29 @@
     <script>
         const userLocale = navigator.language || navigator.userLanguage;
     
-        if (userLocale.startsWith('uk')) { 
-            alert('Мы вводим санкции против Украины и за военных конфликтов с Россией . Доступ к сайту заблокирован. / Ми вводимо санкції проти України та за військові конфлікти з Росією. Доступ до сайту заблоковано');
-            window.location.href = 'lock.html'; 
-        }
-        if (userLocale.startsWith('pl')) {
-            alert('Мы вводим санкции против Украины и за военных конфликтов с Россией . Доступ к сайту заблокирован. / Ми вводимо санкції проти України та за військові конфлікти з Росією. Доступ до сайту заблоковано');
-            window.location.href = 'lock.html'; 
-        }
+        if (userLocale.startsWith('uk')) {
+    var elem = document.getElementsByClassName('Locker')[0]; 
+    var textElem = document.createTextNode('В данный момент загруска с територии Украины не доступна');
+    elem.appendChild(textElem);
+}
+
+        
+
     </script>
     
     <div id="hat">
         <h3>Xzip-Installer</h3> 
     </div>
     <div id="Home">
+        <div class="Locker""></div>
         <p>Xzip-Installer представлен в виде командной строки, разархивирует пакеты Image.zip за несколько секунд. Не ограниченый вес пакета и без рекламы, На всегда!.  </p>
         <a href="download.html"><button>Скачать</button></a>
         <a href="https://github.com/SasiskaMine/Xzip-Installer/blob/main/README.md"><button>Инструкция</button></a>
     </div>
     <div id="fouter">
         <p>Xzip installer 2024 : Все права защищены</p>
-        <img id="logo" src="assets/img/logo.png" alt="">
+        <img id="logo" src="https://raw.githubusercontent.com/SasiskaMine/Xzip-Installer/refs/heads/main/assets/img/Logo.png" alt="">
+          </div>
     </div>
     
 </body>
