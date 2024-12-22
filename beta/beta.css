@@ -1,0 +1,42 @@
+#Header {
+    font-family:'Polonium';
+    color: black;
+}
+@font-face {
+    font-family: 'OpenSans'; 
+    src: url('OpenSans.ttf'); /* Path relative to CSS file */
+    font-weight: bold; /* Since the filename says "Bold" */
+}
+@font-face {
+    font-family: 'Polonium'; 
+    src: url('../Assets/fonts/Polonium-Bold.otf'); /* Path relative to CSS file */
+    font-weight: bold; /* Since the filename says "Bold" */
+}
+body {
+    background-image: url('bg.png'); /* Укажите путь к вашему изображению */
+    background-size: cover; /* Изменено для заполнения всего экрана */
+    background-repeat: no-repeat; /* Убедитесь, что изображение не повторяется */
+    background-position: center; /* Центрирование изображения */
+    height: 100vh; /* Устанавливаем высоту на 100% высоты окна */
+    margin: 0; /* Убираем отступы */
+    border: solid 10px black;
+    border-radius: 10px;
+    background-color: rgb(0, 183, 255);
+}
+button {
+    background-color: orange;
+    border: solid 2px wheat;
+    border-radius: 5px;
+    color: white;
+}
+#hat {
+    border: solid 5px black;
+    border-radius: 10px;
+    background-color: rgb(0, 183, 255);
+}
+#pFouter {
+    position: absolute;
+    left: 30%;
+    bottom: 0;
+    font-family: 'OpenSans';
+}
