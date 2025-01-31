@@ -8,7 +8,7 @@ pyData1 = sys.copyright
 cpuData1 = os.cpu_count()
 
 def main(page: ft.Page):
-    page.title = "Xzip Installer"
+    page.title = "Xzip Installer 1.5"
     page.vertical_alignment = ft.MainAxisAlignment.CENTER
     page.horizontal_alignment = ft.CrossAxisAlignment.CENTER
     
@@ -68,7 +68,7 @@ def main(page: ft.Page):
         license_filepath = os.path.join(script_dir, "Data/updater.txt") 
         license_text = """
         При обновлении мы не обещаем, что загруженный файл будет работать!
-        Package URL = https://raw.githubusercontent.com/SasiskaMine/Xzip-Installer/download/Installer.py
+        Package URL = https://raw.githubusercontent.com/SasiskaMine/Xzip-Installer/download/installer.py
         """
 
         if license_text:
@@ -78,7 +78,7 @@ def main(page: ft.Page):
             page.update()
 
         # Логика для загрузки файла и обновления
-        url = "https://raw.githubusercontent.com/SasiskaMine/Xzip-Installer/download/Installer.py" 
+        url = "https://raw.githubusercontent.com/SasiskaMine/Xzip-Installer/download/installer.py" 
         try:
             response = requests.get(url, stream=True)
             response.raise_for_status()
@@ -101,7 +101,7 @@ def main(page: ft.Page):
 
     def show_settings(e):
         # Отображаем версию и поле для выбора пути
-        settings_text = f"Версия Xzip Installer: 1.1.1"
+        settings_text = f"Версия Xzip Installer: 1.5"
         output_text.value = settings_text
         page.update()
 
@@ -136,6 +136,11 @@ def main(page: ft.Page):
         update_button.disabled = not e.control.value  # Активируем кнопку обновления
         page.update()
 
+    MemImg = ft.Row([ft.Image(src="https://i.pinimg.com/736x/30/c8/81/30c881871076d82860a3ff0e9841f8d9.jpg")]) 
+
+    def secret(e):
+        page.add(MemImg)
+
     agreement_checkbox.on_change = agreement_changed
 
     # Добавляем кнопку настроек
@@ -150,9 +155,13 @@ def main(page: ft.Page):
     # Кнопка для смены темы
     theme_button = ft.ElevatedButton(text="Сменить тему", on_click=toggle_theme)
 
+
+    Secret_button = ft.TextButton(text="",on_click=secret)
+
+
     page.add(
         ft.AppBar(
-            title=ft.Text("Xzip Installer 1.4", size=ft.TextSpan, weight=ft.FontWeight.BOLD),
+            title=ft.Text("Xzip Installer 1.5", size=ft.TextSpan, weight=ft.FontWeight.BOLD),
             bgcolor=ft.colors.BLUE,
             actions=[
                 ft.IconButton(icon=ft.icons.LIGHT_MODE, on_click=toggle_theme),
@@ -166,17 +175,19 @@ def main(page: ft.Page):
                 install_button,
                 output_text,
                 update_button,
-                settings_button,  # Кнопка настроек не работает
-                progress_bar,  # Добавляем прогресс-бар
-                log_console,  # Добавляем консоль для логов
+                settings_button,
+                progress_bar, 
+                log_console,
+                Secret_button 
+                
             ],
             alignment=ft.MainAxisAlignment.CENTER,
             horizontal_alignment=ft.CrossAxisAlignment.CENTER,
-            
         )
         
     )
     if cpuData1 == 1:
         page.add(ft.Text("Ошибка 5: Ошибка ЦП", color=ft.colors.RED))
+
 
 ft.app(target=main)
